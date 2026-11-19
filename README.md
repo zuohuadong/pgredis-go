@@ -50,7 +50,8 @@ if n > 100 { /* rate limited */ }
 
 | Primitive | `@postgresx/noredis` | this port |
 |---|---|---|
-| KV with TTL, NX/XX, compare-and-swap | ✅ | ✅ `Get/Put/Set/CompareAndSwapEqual/Expire/Persist/SweepKV` |
+| KV with TTL, NX/XX, compare-and-swap | ✅ | ✅ `Get/Put/Set/CompareAndSwapEqual/Expire/Persist/TTLOf/SweepKV` |
+| set-if-absent returning the winner (`SET NX GET` + TTL) | ✅ | ✅ `GetOrSet` |
 | integer counters | ✅ | ✅ `CounterAdd/CounterGet/CounterSet/CounterDelete/SweepCounters` |
 | sorted sets | ✅ | ✅ `ZAdd/ZScore/ZCard/ZRem/ZRemRangeByScore/ZRange` |
 | expiring-member slot pool | ✅ | ✅ `TryReserveSlot/RenewSlot/ReleaseSlot/Holders` |
