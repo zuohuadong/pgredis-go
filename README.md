@@ -53,6 +53,7 @@ if n > 100 { /* rate limited */ }
 | KV with TTL, NX/XX, compare-and-swap | ✅ | ✅ `Get/Put/Set/CompareAndSwapEqual/Expire/Persist/TTLOf/SweepKV` |
 | set-if-absent returning the winner (`SET NX GET` + TTL) | ✅ | ✅ `GetOrSet` |
 | integer counters | ✅ | ✅ `CounterAdd/CounterGet/CounterSet/CounterDelete/SweepCounters` |
+| counter write returning the window remainder | ✅ | ✅ `CounterAddWithTTL` |
 | sorted sets | ✅ | ✅ `ZAdd/ZScore/ZCard/ZRem/ZRemRangeByScore/ZRange` |
 | expiring-member slot pool | ✅ | ✅ `TryReserveSlot/RenewSlot/ReleaseSlot/Holders` |
 | rate limits (fixed, sliding, token bucket) | ✅ | ✅ `RateLimitHit/HitN/Peek/Reward/SweepRateLimits` |
